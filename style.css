@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+:root {
+    --lightgrayviolet: hsl(270, 3%, 87%);
+    --darkgrayviolet: hsl(279, 6%, 55%);
+    --darkviolet: hsl(278, 68%, 11%)
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+}
+
+#bg img {
+    width: 100%;
+    
+}
+
+.bod {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#content {
+    width: 400px;
+    margin-left: 15px;
+}
+
+#container2 {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0;
+    gap: 20px;
+    align-items: center;
+}
+
+#container2 a {
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+.form-control {
+    color: var(--darkviolet);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.form-control  {
+    margin-bottom: 20px;
+}
+
+.form-control div {
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 1px solid var(--darkgrayviolet);
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+
+.form-control-2 {
+    color: var(--darkviolet);
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    font-weight: bold;
+}
+
+.form-control-2  {
+    margin-bottom: 10px;
+}
+
+.form-control-2 div {
+    margin-bottom: 5px;
+}
+
+.form-control-2 input {
+    border: 1px solid var(--darkgrayviolet);
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.two {
+    display: flex;
+    gap: 4px;
+    width: 150px;
+}
+
+.two input {
+    appearance: none;
+    
+}
+
+.btn {
+    background-color: var(--darkviolet);
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: white;
+    cursor: pointer;
+    color: black;
+    padding: 12px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.er-input {
+    border: 1px solid var(--darkgrayviolet);;
+}
+
+.er-text {
+    color: red;
+    font-size: 14px;
+    
+}
+
+#container2 img {
+ width: 100px;
+ 
+}
+
+.invisible {
+    display: none;
+}
+
+#validation {
+    display: none;
+}
+
+.nodisplay {
+    cursor: default;
+    background-color: gray;
+    
+}
+
+.badbtn {
+    background-color: var(--darkviolet);
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.badbtn:hover {
+    background-color: gray;
+    cursor: default;
+    color: black;
+    padding: 12px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.complete {
+    text-align: center;
+    color: var(--darkviolet);
+    font-weight:800;
+    font-size: 24px;
+}
+

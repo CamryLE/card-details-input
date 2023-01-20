@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Card Form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!--Image-->
+  <div class="bod">
+  <img id="bg" src="images/bg-main-desktop.png" alt="">
+  <!--Right Contianer-->
+  <section id="content">
+    <form action="completed.html" name="sendcard" id="container">
+      <!--Card FillOut-->
+      <div class="form-control">
+        <div>CARDHOLDER NAME</div>
+        <input id="cardholder" type="text" name="name" placeholder="e.g. Jack Hoffman" required>
+        <div class="cardspan er-text" id="cardholdererror"></div>
+      </div>
+      <div class="form-control">
+        <div>CARD NUMBER</div>
+        <input maxlength="16" id="cardnumber" type="text" name="Card Number" placeholder="e.g. 1234 5678 9123 0000" required>
+        <div class="cardspan er-text" id="cardnumbererror"></div>
+      </div>
+      <div class="form-control-2">
+        <div class="first">
+          <div>EXP. DATE (MM/YY)</div>
+        <div class="two">
+          <input type="number" maxlength="2" min ="1" max="12" name="month" placeholder="MM" required>
+          <input type="number" maxlength="2" min="23" max="30" name="year" placeholder="YY" required>
+        </div>
+        </div>
+        <div class="second">
+          <div>CVC</div>  
+          <input type="text" id="cvcinput" maxlength="3" name="CVC" placeholder="e.g. 123" required>
+          <div class="cardspan er-text" id="cardcvcerror"></div>
+        </div>
+        
+      </div>
+      <div class="form-control">
+        
+      </div>
+      <input id="submitform" type="button" value="Confirm" class="btn"></input>
+    </div>
+    
+  </section>
+  </div>
+  </div>
+  
+</body>
+
+<script src="script.js"></script>
+</html>
