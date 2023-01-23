@@ -19,13 +19,15 @@
   <!--Image-->
   <div class="bod">
   <img id="bg" src="images/bg-main-desktop.png" alt="">
+  <img id="bg-mobile" src="images/bg-main-mobile.png" alt="">
+
   <!--Right Contianer-->
   <section id="content">
     <form action="completed.html" name="sendcard" id="container">
       <!--Card FillOut-->
       <div class="form-control">
         <div>CARDHOLDER NAME</div>
-        <input id="cardholder" type="text" name="name" placeholder="e.g. Jack Hoffman" required>
+        <input class="" id="cardholder" type="text" name="name" placeholder="e.g. Jack Hoffman" required>
         <div class="cardspan er-text" id="cardholdererror"></div>
       </div>
       <div class="form-control">
@@ -35,10 +37,10 @@
       </div>
       <div class="form-control-2">
         <div class="first">
-          <div>EXP. DATE (MM/YY)</div>
+          <div>EXP. DATE</div>
         <div class="two">
-          <input type="number" maxlength="2" min ="1" max="12" name="month" placeholder="MM" required>
-          <input type="number" maxlength="2" min="23" max="30" name="year" placeholder="YY" required>
+          <input type="number" id="month" maxlength="2" min ="1" max="12" name="month" placeholder="MM" required>
+          <input type="number" id="year" maxlength="2" min="23" max="30" name="year" placeholder="YY" required>
         </div>
         </div>
         <div class="second">
@@ -53,10 +55,8 @@
       </div>
       <input id="submitform" type="button" value="Confirm" class="btn"></input>
     </div>
-    
   </section>
-  </div>
-  </div>
+  
   
 </body>
 
