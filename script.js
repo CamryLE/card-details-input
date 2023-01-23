@@ -1,21 +1,26 @@
-var cardHolder = document.getElementById('cardholder')
-var cardSpan = document.getElementById('cardspan')
-var cardNumber = document.getElementById('cardnumber')
-var submitForm = document.getElementById('submitform')
-var validation = document.getElementById('cardvalidation')
-var numVal = document.getElementById('numvalidation')
-var CVC = document.getElementById('cvcinput')
-var form = document.getElementById('container')
-var error = 1
-var numberError = 1
-var nameError = 1
-var cvcError = 1
+let cardHolder = document.getElementById('cardholder')
+let cardSpan = document.getElementById('cardspan')
+let cardNumber = document.getElementById('cardnumber')
+let submitForm = document.getElementById('submitform')
+let validation = document.getElementById('cardvalidation')
+let numVal = document.getElementById('numvalidation')
+let CVC = document.getElementById('cvcinput')
+let form = document.getElementById('container')
+let year = document.getElementById('month')
+let month = document.getElementById('year')
+let error = 1
+let numberError = 1
+let nameError = 1
+let cvcError = 1
 
 cardNumber.addEventListener('keyup', checkNumber)
 cardHolder.addEventListener('keyup', checkName)
 CVC.addEventListener('keyup', checkCVC)
 submitForm.addEventListener('mouseover', val)
 submitForm.addEventListener('click', displayVal)
+// year.addEventListener('keyup', checkDate)
+// month.addEventListener('keyup', checkDate)
+
 //cardNumber.addEventListener('keyup', checkNumber)
 //submitForm.addEventListener('click', validateForm)
 function checkName() {
@@ -23,12 +28,15 @@ function checkName() {
     if (isNaN(cardHolder.value)) {
         document.getElementById('cardholdererror').innerText = ""
         nameError = 0
+        cardHolder.parentElement.className = 'form-control'
     } else if (cardHolder.value == "") {
         document.getElementById('cardholdererror').innerText = "Cannot be Blank"
         nameError = 1
+        
     } else {
         document.getElementById('cardholdererror').innerText = "Cant have numbers"
         nameError = 1
+        
     }
 }
 
@@ -36,6 +44,7 @@ function checkNumber() {
     if (isNaN(cardNumber.value)) {
         document.getElementById('cardnumbererror').innerText = "Wrong Input, Numbers Only"
         numberError = 1
+
     } else if (cardNumber.value == "") {
         document.getElementById('cardnumbererror').innerText = "Cannot be Blank"
         numberError = 1
@@ -61,10 +70,15 @@ function checkCVC() {
     }
 }
 
+// function checkDate() {
+//     if (month.value || year.value = "") {
+
+//     }
+// }
+
 function val () {
     if (numberError > 0 || nameError > 0 || cvcError > 0) {
         container.action = 'completed.html'
-        console.log ('deez')
         submitForm.type = 'button'
     }
     else {
@@ -79,6 +93,20 @@ function displayVal () {
         checkName()
         checkNumber()
     }
+
+    if (numberError > 0) {
+        cardHolder.parentElement.className = 'form-control bad input'
+    } 
+
+    if (nameError > 0) {
+        cardNumber.parentElement.className = 'form-control bad input'
+    } 
+
+    if (cvcError > 0) {
+        CVC.parentElement.className = 'form-control bad input'
+    } 
+
+    
 }
 
 
@@ -88,28 +116,6 @@ function displayVal () {
 // }
 
 //function checkNumber
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // function makeValid () {
 //     if (cardHolder = ''){
@@ -132,12 +138,6 @@ function displayVal () {
 //         document.sendcard.action = "completed.html"
 //     } 
 // }
-
-
-
-
-
-
 
 // function checkCard(e) {
 //     if (e.target.value.includes('1')) {
@@ -169,7 +169,7 @@ function displayVal () {
 
 //     if(e.target.value.includes('0','2','3','4','5','6','7','8','9')) {
 //         cardHolder.nextElementSibling.textContent = 'Incorrect Input, Letters Only.'
-//         //var cardError = document.createTextNode('Incorrect Input, Letters Only.')
+//         //let cardError = document.createTextNode('Incorrect Input, Letters Only.')
 //         //cardSpan.appendChild(cardError)
 //     } else {
 //     cardHolder.nextElementSibling.textContent = ''
